@@ -1,0 +1,151 @@
+#root {
+  max-width: 594px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-title {
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.62rem;
+}
+
+.game-desc {
+  color: #8e8e8e;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.14rem;
+}
+
+.gamestatus-container {
+  min-height: 70px;
+  width: 353px;
+  height: 70px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.gamestatus-container.won {
+  background-color: #10a95b;
+}
+
+.gamestatus-container.lost {
+  background-color: #ba2a2a;
+}
+
+.gamestatus-title {
+  margin: 0;
+  color: #ffffff;
+  font-size: 1.25rem;
+}
+
+.gamestatus-decs {
+  margin: 0;
+  color: #ffffff;
+}
+
+.language-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0px;
+}
+
+.lang {
+  font-weight: 700;
+  border-radius: 3px;
+  padding: 4.5px;
+  position: relative;
+  transition: all 0.3s ease-in;
+}
+
+.strike::before {
+  content: "💀";
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+
+.strike {
+  position: relative;
+}
+
+.strike::before {
+  opacity: 1;
+}
+
+.word-container {
+  display: flex;
+  gap: 2px;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 36px 0%;
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 23.45px;
+  color: #f9f4da;
+}
+
+.word-letter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #323232;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #f9f4da;
+}
+
+.word-letter.guessed {
+  color: #10a95b;
+}
+
+.word-letter.not-guessed {
+  color: #ec5d49;
+}
+
+.keyboard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  padding-block-end: 2rem;
+}
+
+.key {
+  width: 40px;
+  height: 40px;
+  background-color: #fcba29;
+  border: 1px solid #d7d7d7;
+  color: #1e1e1e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.key.correct {
+  background-color: #10a95b;
+}
+
+.key.wrong {
+  background-color: #ec5d49;
+}
